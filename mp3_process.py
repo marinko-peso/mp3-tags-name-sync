@@ -20,10 +20,11 @@ def process_file(file_name):
 	- change meta data to match the artist and name from the path
 	"""
 	if not allowed_file_type(file_name):
-		print "--> %s has file type which is not supported. No action taken." % file_name
+		print '--> %s has file type which is not supported. No action taken.' % file_name
 		return
 
 	base_name = os.path.basename(file_name)
+	print '--> %s' % base_name
 	name_elements = base_name.split(' - ')
 	if name_elements and len(name_elements) == 2:
 		# Get artist from the name of the file.
